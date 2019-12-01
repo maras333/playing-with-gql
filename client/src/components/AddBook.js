@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery, useMutation } from '@apollo/react-hooks';
-import { GET_AUTHORS, GET_BOOKS } from './queries/queries';
-import { ADD_BOOK } from './queries/mutations';
+import { GET_AUTHORS, GET_BOOKS } from '../queries/queries';
+import { ADD_BOOK } from '../queries/mutations';
 
 function AddBook() {
     const { loading, error, data } = useQuery(GET_AUTHORS);
