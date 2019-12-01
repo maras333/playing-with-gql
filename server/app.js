@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const qraphqlIHTTP = require('express-graphql');
 const mongoose = require('mongoose');
-const PORT = 3000;
+const PORT = 4000;
 const schema = require('./schema/schema');
 
 const app = express();
