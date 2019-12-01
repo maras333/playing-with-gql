@@ -1,13 +1,14 @@
 import React from 'react';
-import ApolloClient, { gql } from 'apollo-boost';
+import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 
 import logo from './logo.svg';
 import './App.css';
 import BookList from './components/BookList';
+import AddBook from './components/AddBook';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: 'http://localhost:4000/graphql'
 });
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <BookList />
+        <AddBook />
       </div>
     </ApolloProvider>
   );
