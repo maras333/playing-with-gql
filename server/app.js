@@ -6,7 +6,11 @@ const PORT = 3000;
 const schema = require('./schema/schema');
 
 const app = express();
-mongoose.connect(`mongodb+srv://${process.env.MONGOUSERNAME}:${process.env.PASSWORD}@booksandauthorsgql-asso8.mongodb.net/test?retryWrites=true&w=majority`);
+mongoose.connect(`mongodb+srv://${process.env.MONGOOUSERNAME}:${process.env.PASSWORD}@booksandauthorsgql-asso8.mongodb.net/${process.env.DATABASENAME}?retryWrites=true&w=majority`, { 
+    useUnifiedTopology: true, 
+    useNewUrlParser: true, 
+    useCreateIndex: true 
+});
 mongoose.connection.once('open', () => {
     console.log('Connected to DataBase');
 })
