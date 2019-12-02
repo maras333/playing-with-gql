@@ -19,7 +19,7 @@ const GET_BOOKS = gql`
 `;
 
 const GET_BOOK = gql`
-    query($id: ID!) {
+    query($id: ID) {
         book(id: $id) {
             name
             genre
