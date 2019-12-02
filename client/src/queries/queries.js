@@ -27,6 +27,7 @@ const GET_BOOK = gql`
                 name
                 age
                 books {
+                    id
                     name
                 }
             }

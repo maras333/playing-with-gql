@@ -9,7 +9,7 @@ export default function BookDetails({ currentBookId }) {
     });
 
     if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error :(</p>;
+    if (error) return <p>Book not chosen!</p>;
     return (
         <div>
             {
@@ -21,8 +21,8 @@ export default function BookDetails({ currentBookId }) {
                     <p>{data.book.author.name}</p>
                     <ul>
                         {
-                            data.book.author.books.map((book) => {
-                                return <li>{book.name}</li>
+                            data.book.author.books.map(({id, name}) => {
+                                return <li key={id}>{name}</li>
                             })
                         }
                     </ul>
